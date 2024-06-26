@@ -40,3 +40,11 @@ function App() {
 }
 
 export default App;
+
+
+
+// retos: 
+// hacerla responsiva
+// hacer negrita algunos textos del testimonio
+// cambiar el valor de alt en la foto
+//guardar los valores de los props en archivos separados
