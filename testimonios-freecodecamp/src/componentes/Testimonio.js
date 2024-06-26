@@ -5,7 +5,7 @@ function Testimonio(props) {
     return(
       <div className="contenedor-testimonio">
         <img 
-        className="imagen-testimonio" src={require(`../assets/test-${props.imagen}.png`)} alt="foto"/>
+        className="imagen-testimonio" src={require(`../assets/test-${props.imagen}.png`)} alt="foto" />
         <div className="contenedor-texto-testimonio">
 
           <p className="nombre-testimonio">
