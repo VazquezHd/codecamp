@@ -5,6 +5,7 @@ import freeCodeLogo from './assets/logo.png';
 
 
 function App() {
+  //agregando hook useState
 
   const manejarClic = () => {
     console.log('Clic');
