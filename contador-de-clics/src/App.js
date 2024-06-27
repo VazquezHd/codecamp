@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 
 function App() {
+
   //agregando hook useState
   const[numClics, setNumClics] = useState(0);
 
@@ -14,11 +15,11 @@ function App() {
 
   const manejarClic = () => {
     setNumClics(numClics + 1 );
-  }
+  };
 
   const reiniciarContador = () => {
     setNumClics(0);
-  }
+  };
 
 
   return (
@@ -45,3 +46,4 @@ function App() {
 }
 
 export default App;
+
