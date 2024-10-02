@@ -9,8 +9,9 @@ function Boton(props) {
 
     return (
         <div
-        className={`boton-contenedor ${esOperador(props.children)?'operador':''}`.trimEnd()}> 
+        className={`boton-contenedor ${esOperador(props.children)?'operador':''}`.trimEnd()}onClick={()=> props.manejarClic(props.children)}> 
         {/* .trim remueve espacios */}
+        
             {props.children}
         </div>
     );
