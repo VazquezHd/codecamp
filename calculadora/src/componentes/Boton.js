@@ -4,17 +4,39 @@ import '../hojas-de-estilo/Boton.css'
 function Boton(props) {
 
     const esOperador = valor =>{
-        return isNaN(valor) && (valor != '.') && (valor != '=');
+        return isNaN(valor) && (valor !== '.') && (valor !== '=');
     };
 
-    return (
-        <div
-        className={`boton-contenedor ${esOperador(props.children)?'operador':''}`.trimEnd()}onClick={()=> props.manejarClic(props.children)}> 
-        {/* .trim remueve espacios */}
+    if (esOperador(props.children)){
+        return (
+            <div
+            className='boton-contenedor operador'
+            onClick={()=> props.manejarClic(props.children)}> 
+            {/* .trim remueve espacios */}
+            
+                {props.children}
+            </div>
+        );
+    } else{
+        return (
+            <div
+            className='boton-contenedor'
+            onClick={()=> props.manejarClic(props.children)}> 
+            {/* .trim remueve espacios */}
+            
+                {props.children}
+            </div>
+        );
+    }
+
+    // return (
+    //     <div
+    //     className={`boton-contenedor ${esOperador(props.children)?'operador':''}`.trimEnd()}onClick={()=> props.manejarClic(props.children)}> 
+    //     {/* .trim remueve espacios */}
         
-            {props.children}
-        </div>
-    );
+    //         {props.children}
+    //     </div>
+    // );
 }
 
 
