@@ -1,6 +1,6 @@
 import './App.css';
 import freeCodeCampLogo from './assets/freecodecamp-logo.png';
-import Tarea from './componentes/Tarea';
+import ListaDeTareas from './componentes/ListaDeTareas';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className='tareas-lista-p'>
           <h1>Mis tareas</h1>
-          <Tarea texto='Aprender React'/>
+          <ListaDeTareas />
         </div>
     </div>
   );
