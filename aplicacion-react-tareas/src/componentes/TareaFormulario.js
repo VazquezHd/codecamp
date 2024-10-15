@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import '../hojas-de-estilo/tareaFormulario.css';
+import { v4 as uuidv4 } from "uuid";
 
 function TareaFormulario(props) {
 
@@ -12,10 +13,15 @@ function TareaFormulario(props) {
   }
 
   const manejarEnvio = e =>{
+    e.preventDefault();
+    console.log("env form");
+
     const tareaNueva = {
-      id: '345',
-      texto: 'hola'
+      id: uuidv4(),
+      texto: input,
+      completada: false 
     }
+    props.onSubmit(tareaNueva);
   }
 
 
@@ -23,7 +29,9 @@ function TareaFormulario(props) {
 
 
   return (
-    <form className='tarea-formulario'>
+    <form 
+    className='tarea-formulario'
+    onSubmit={manejarEnvio}>
       <input
         className='tarea-input'
         type='text'
